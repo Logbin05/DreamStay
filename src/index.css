@@ -1,68 +1,73 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Montserrat Alternates";
+  src: url(./assets/fonts/MontserratAlternates.woff2) format(woff2);
+  font-style: normal;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  outline: 1px solid green !important;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates";
+  background-color: oklch(0.2 0.02 255);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+@theme {
+  --color-primary-color: oklch(0.2 0.02 255);
+  --color-accent-color: oklch(0.65 0.1 48);
+  --color-secondary-color: oklch(0.28 0.02 260);
+  --color-text-color: oklch(0.92 0.01 260);
+  --color-accent-hover: oklch(0.7 0.11 48);
+  --color-accent-active: oklch(0.6 0.09 48);
+  --color-border-color: oklch(0.32 0.01 260);
+  --color-text-muted: oklch(0.70 0.01 260);
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  --font-MontserratAlternates: "Montserrat Alternates" --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.375rem;
+  --font-size-2xl: 1.75rem;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.55;
+  --line-height-loose: 1.75;
+
+  --letter-spacing-tight: 0.01em;
+  --letter-spacing-normal: 0.02em;
+  --letter-spacing-loose: 0.04em;
+
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.05);
+  --shadow-md: 0 4px 12px oklch(0 0 0 / 0.08);
+  --shadow-lg: 0 8px 24px oklch(0 0 0 / 0.1);
+
+  --motion-fast: 120ms;
+  --motion-normal: 220ms;
+  --motion-slow: 360ms;
+
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --container-max-width: 1200px;
+  --content-max-width: 720px;
+
+  --tap-target-min: 44px;
 }
