@@ -35,7 +35,7 @@ export function Header() {
                        rounded-2xl shadow-lg
                        transition hover:bg-white/20"
             >
-              Отели
+              Меню
               <svg
                 className={`h-4 w-4 transition ${open ? "rotate-180" : ""}`}
                 viewBox="0 0 20 20"
@@ -63,13 +63,13 @@ export function Header() {
             >
               <ul className="py-2 text-white text-sm">
                 <li className="px-4 py-3 hover:bg-white/20 cursor-pointer rounded-xl mx-2">
-                  Казань
+                  Все отели
                 </li>
                 <li className="px-4 py-3 hover:bg-white/20 cursor-pointer rounded-xl mx-2">
-                  Настройки
+                  Забронировать
                 </li>
                 <li className="px-4 py-3 hover:bg-white/20 cursor-pointer rounded-xl mx-2">
-                  Выйти
+                  Отзовы
                 </li>
               </ul>
             </div>
