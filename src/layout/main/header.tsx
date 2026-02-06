@@ -35,7 +35,7 @@ export function Header() {
                        rounded-2xl shadow-lg
                        transition hover:bg-white/20"
             >
-              Отели
+              Меню
               <svg
                 className={`h-4 w-4 transition ${open ? "rotate-180" : ""}`}
                 viewBox="0 0 20 20"
