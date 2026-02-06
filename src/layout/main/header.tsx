@@ -63,13 +63,13 @@ export function Header() {
             >
               <ul className="py-2 text-white text-sm">
                 <li className="px-4 py-3 hover:bg-white/20 cursor-pointer rounded-xl mx-2">
-                  Казань
+                  Все отели
                 </li>
                 <li className="px-4 py-3 hover:bg-white/20 cursor-pointer rounded-xl mx-2">
-                  Настройки
+                  Забронировать
                 </li>
                 <li className="px-4 py-3 hover:bg-white/20 cursor-pointer rounded-xl mx-2">
-                  Выйти
+                  Отзовы
                 </li>
               </ul>
             </div>
