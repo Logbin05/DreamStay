@@ -82,24 +82,13 @@ export function Header() {
 
           <li>
             <button
-            onClick={togglePopUp}
+              onClick={togglePopUp}
               className="glass flex items-center gap-2
                        px-5 py-2 text-lg text-white
                        rounded-2xl shadow-lg
                        transition hover:bg-white/20"
             >
               Войти
-            </button>
-          </li>
-
-          <li>
-            <button
-              className="glass flex items-center gap-2
-                       px-5 py-2 text-lg text-white
-                       rounded-2xl shadow-lg
-                       transition hover:bg-white/20"
-            >
-              Зарегистрироваться
             </button>
           </li>
         </ul>
