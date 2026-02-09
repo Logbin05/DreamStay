@@ -1,11 +1,13 @@
+import { LogInPopUp } from "@features/auth/login";
 import { useEffect, useRef, useState } from "react";
 
 export function Header() {
-  const [open, setOpen] = useState(false);
   const ref = useRef<HTMLLIElement>(null);
+  const [open, setOpen] = useState<boolean>(false);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   useEffect(() => {
-    const handler = (e: MouseEvent) => {
+    function handler(e: MouseEvent) {
       if (!ref.current?.contains(e.target as Node)) {
         setOpen(false);
       }
@@ -13,6 +15,10 @@ export function Header() {
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
+
+  function togglePopUp() {
+    setToggle(prev => !prev);
+  }
 
   return (
     <header className="z-10 w-screen h-[120px] flex items-center justify-center bg-gray-700/30 backdrop-blur-xl">
@@ -54,11 +60,10 @@ export function Header() {
               glass absolute right-0 mt-3 w-56 rounded-2xl
               shadow-2xl origin-top
               transition-all duration-200 ease-out
-              ${
-                open
+              ${open
                   ? "opacity-100 scale-100 bg-white/15"
                   : "pointer-events-none opacity-0 scale-95"
-              }
+                }
             `}
             >
               <ul className="py-2 text-white text-sm">
@@ -77,6 +82,7 @@ export function Header() {
 
           <li>
             <button
+            onClick={togglePopUp}
               className="glass flex items-center gap-2
                        px-5 py-2 text-lg text-white
                        rounded-2xl shadow-lg
@@ -98,6 +104,11 @@ export function Header() {
           </li>
         </ul>
       </div>
+      {toggle && (
+        <div className="glass left-2/6 top-50 absolute">
+          <LogInPopUp onAction={togglePopUp} />
+        </div>
+      )}
     </header>
   );
 }

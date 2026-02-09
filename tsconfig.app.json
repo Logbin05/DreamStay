@@ -33,7 +33,7 @@
       "@assets/*": ["assets/*"],
       "@type/*": ["type/*"],
       "@pages/*": ["pages/*"],
-      "@mock/*": ["mock/*"]
+      "@mock/*": ["mock/*"],
     }
   },
   "include": ["src"]
