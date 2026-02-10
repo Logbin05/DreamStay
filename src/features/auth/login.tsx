@@ -1,7 +1,7 @@
 import type { AuthPopUp } from "@type/ui/auth";
 import { BiX } from "react-icons/bi";
 
-export function LogInPopUp({ onAction }: AuthPopUp) {
+export function LogInPopUp({ onAction, onRegister }: AuthPopUp) {
   return (
     <div
       className="
@@ -88,6 +88,7 @@ export function LogInPopUp({ onAction }: AuthPopUp) {
             </button>
 
             <button
+              onClick={onRegister}
               className="
                 text-sm text-white/70
                 transition hover:text-white

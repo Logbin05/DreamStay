@@ -19,3 +19,13 @@ export interface LoginHistory {
   userId: number;
   loginTime: string;
 }
+
+
+export interface RegisterFormData {
+  fullName: string;
+  email?: string;
+  phone?: string;
+  login: string;
+  password: string;
+  confirmPassword: string;
+}
