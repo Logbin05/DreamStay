@@ -4,8 +4,10 @@ export interface Hotel {
   categoryId: number;
   name: string;
   address: string;
+  image?: string;
   description?: string;
   rating?: number;
+  price: number;
 }
 
 export interface HotelService {
